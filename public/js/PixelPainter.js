@@ -150,9 +150,16 @@ $(function(){
 
   $('#save').click(function() {
     var file_name  = prompt("Please enter title for drawing: ", "New Drawing");
+    var grid = $('.grid').html();
+    console.log(file_name);
+    console.log(grid);
 
     if (file_name !== null) {
-      console.log(file_name);
+
+      $.post('/', { file_name : file_name, grid : grid }, function(data) { 
+          alert(file_name + " saved successfully.");
+          console.log(data.file_name, data.grid);
+        });
     }
   });
 
