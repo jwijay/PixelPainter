@@ -1,5 +1,5 @@
 @import url('_reset.css');
-@import url(http://fonts.googleapis.com/css?family=Fugaz+One);
+@import url(http://fonts.googleapis.com/css?family=Fugaz+One|Lato);
 
 .clearfix:after {
   content: "";
@@ -22,7 +22,7 @@ body {
 
 h1 {
   font-size: 2em;
-  /*color: red;*/
+  margin-bottom: 10px;
 }
 
 #artboard {
@@ -43,3 +43,26 @@ h1 {
   display: block;
   margin: auto;
 }
+
+.saved-grid {
+  width: 760px;
+}
+
+#pics {
+  float: left;
+}
+
+#pics ul {
+  padding-left: 20px;
+  list-style-type: square;
+  font-family: 'Lato', sans-serif;
+  line-height: 1em;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;

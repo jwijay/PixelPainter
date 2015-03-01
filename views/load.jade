@@ -1,0 +1,13 @@
+extends ./application.jade
+
+block content
+  #pics
+    ul
+      each pic in pics
+        li
+          a(href="/pic/#{pic.file_name}")!= pic.file_name
+    br
+    button#create create new
+block scripts
+  script(type='text/javascript', src='http://code.jquery.com/jquery-1.10.2.min.js')
+  script(src='/js/PixelPainter.js')

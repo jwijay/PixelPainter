@@ -94,6 +94,7 @@ $(function(){
 
     $('#artboard').append(grid);
     $('.grid').css({"width" : rowWidth.toString() + "px"});
+    console.log(rowWidth);
     $('#artboard').addClass('clearfix');
 
   }
@@ -151,16 +152,23 @@ $(function(){
   $('#save').click(function() {
     var file_name  = prompt("Please enter title for drawing: ", "New Drawing");
     var grid = $('.grid').html();
-    console.log(file_name);
-    console.log(grid);
 
     if (file_name !== null) {
 
       $.post('/', { file_name : file_name, grid : grid }, function(data) { 
           alert(file_name + " saved successfully.");
-          console.log(data.file_name, data.grid);
+          //TODO: see if there's a way to check database for 
+          //same filename, first
         });
     }
+  });
+
+  $('#load').click(function() {
+    window.location = "/load";
+  });
+
+  $('#create').click(function() {
+    window.location = "/";
   });
 
 });//document.ready

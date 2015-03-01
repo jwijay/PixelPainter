@@ -1,0 +1,13 @@
+extends ./application.jade
+
+block content
+  #artboard
+    .saved-grid!= pic.grid
+
+block scripts
+  script(type='text/javascript', src='http://code.jquery.com/jquery-1.10.2.min.js')
+  script(src='/js/PixelPainter.js')
+  script.
+    $(function () {
+      $('.grid').remove();
+    });
