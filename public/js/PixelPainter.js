@@ -94,7 +94,7 @@ $(function(){
 
     $('#artboard').append(grid);
     $('.grid').css({"width" : rowWidth.toString() + "px"});
-    console.log(rowWidth);
+    // console.log(rowWidth);
     $('#artboard').addClass('clearfix');
 
   }
@@ -152,6 +152,10 @@ $(function(){
   $('#save').click(function() {
     var file_name  = prompt("Please enter title for drawing: ", "New Drawing");
     var grid = $('.grid').html();
+
+    if (typeof grid === "undefined") {
+      grid = $('.saved-grid').html();
+    }
 
     if (file_name !== null) {
 

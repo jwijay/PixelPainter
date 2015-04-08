@@ -55,7 +55,7 @@ app.get('/load', function(req, res) {
 app.post('/', function(req, res) {
   var file_name = req.body.file_name;
   var grid = req.body.grid;
-  console.log(grid);
+  console.log('grid', grid);
   console.log(file_name);
 
   var pic = new Pic(
