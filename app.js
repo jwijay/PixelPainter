@@ -3,7 +3,8 @@ var app = express();
 var bodyParser = require('body-parser');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect(process.env.MONGOLAB_URI);
+// mongoose.connect('mongodb://localhost/test');
 var Schema = mongoose.Schema;
 
 var picSchema = new Schema({
