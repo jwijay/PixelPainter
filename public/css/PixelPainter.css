@@ -13,6 +13,7 @@ html, button {
 }
 
 body {
+  margin: 10px 0 0 10px;
   min-width: 915px;
     -webkit-user-select: none;
      -moz-user-select: -moz-none;
